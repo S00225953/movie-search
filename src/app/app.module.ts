@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { OmdbApiService } from './services/omdb-api.service';
@@ -9,7 +10,8 @@ import { OmdbApiService } from './services/omdb-api.service';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [OmdbApiService],
   bootstrap: [AppComponent]

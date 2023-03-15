@@ -4,4 +4,10 @@ export interface IOMDBResponse {
     Director:string;
     Poster:string;
     Error:string;
+    Ratings:ratingDetails[];
+}
+
+interface ratingDetails {
+    Source:string;
+    Value:string;
 }

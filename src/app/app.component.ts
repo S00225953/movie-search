@@ -14,8 +14,8 @@ export class AppComponent {
 
   constructor(private _omdbService:OmdbApiService) {}
 
-  getMovieDetails(movieName:string) : boolean {
-    this._omdbService.getMovieData(movieName).subscribe(
+  getMovieDetails(movieName:HTMLInputElement) : boolean {
+    this._omdbService.getMovieData(movieName.value).subscribe(
       movieData => {
         this.movieData = movieData;
         console.log('Director Name: ' + this.movieData.Director);
